@@ -5,7 +5,7 @@ CREATE TABLE lists (
 
 CREATE TABLE todos (
   id serial PRIMARY KEY,
-  list_id integer NOT NULL REFERENCES list (id),
+  list_id integer NOT NULL REFERENCES lists (id),
   name text NOT NULL,
   completed boolean NOT NULL DEFAULT false
   );
