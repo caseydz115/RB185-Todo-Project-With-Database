@@ -66,7 +66,7 @@ class DatabasePersistence
   end
 
   def update_todo_status(list_id, todo_id, new_status)
-    sql = "UPDATE todos SET name = $1 WHERE list_id = $2 AND id = $3"
+    sql = "UPDATE todos SET completed = $1 WHERE list_id = $2 AND id = $3"
     query(sql, new_status, list_id, todo_id)
   end
 
